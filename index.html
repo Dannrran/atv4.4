@@ -7,13 +7,13 @@
 </head>
 <body>
 <script>
-  // simples Jokenpo com console.log
+ 
   const opcoes = ["pedra", "papel", "tesoura"];
   let pontos = 0;
 
   while (true) {
     let escolha = prompt("Escolha sua forma: pedra, papel ou tesoura");
-    if (escolha === null) { // usuário cancelou
+    if (escolha === null) { 
       console.log("Jogo cancelado. Seus pontos:", pontos);
       break;
     }
@@ -24,7 +24,7 @@
       continue;
     }
 
-    // jogada da máquina (0,1,2)
+  
     let maquinaIndex = Math.floor(Math.random() * 3);
     let maquina = opcoes[maquinaIndex];
 
@@ -35,8 +35,7 @@
       continue;
     }
 
-    // verificar vencedor
-    // pedra > tesoura, tesoura > papel, papel > pedra
+   
     if (
       (escolha === "pedra" && maquina === "tesoura") ||
       (escolha === "tesoura" && maquina === "papel") ||
@@ -54,4 +53,5 @@
   }
 </script>
 </body>
+
 </html>
